@@ -94,14 +94,32 @@ public class ContactBook {
     }
 
     public boolean existsDuplicatePhone() {
+        for (int i = counter - 1; i > 0; i--) {
+            int ii = searchIndexP(contacts[i].getPhone());
+            if (ii != i && ii != -1)
+                return true;
+        }
         return false;
     }
 
     public boolean hasPhone(int phone) {
-        return false;
+        return searchIndexP(phone) >= 0;
     }
 
-    public String getName() {
-        return "1";
+    private int searchIndexP(int phone) {
+        int i = 0;
+        int result = -1;
+        boolean found = false;
+        while (i<counter && !found)
+            if (contacts[i].getPhone() == phone)
+                found = true;
+            else
+                i++;
+        if (found) result = i;
+        return result;
+    }
+
+    public String getNameP(int phone) {
+        return contacts[searchIndexP(phone)].getName();
     }
 }

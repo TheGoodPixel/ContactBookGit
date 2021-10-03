@@ -26,7 +26,7 @@ public class Main {
     public static final String CONTACT_UPDATED = "contactBook.Contact updated.";
     public static final String BOOK_EMPTY = "contactBook.Contact book empty.";
     public static final String QUIT_MSG = "Goodbye!";
-    public static final String DUPLICATE_PHONE_NOT_EXISTS = "All contacts have different phone numbers";
+    public static final String DUPLICATE_PHONE_NOT_EXISTS = "All contacts have different phone numbers.";
     public static final String DUPLICATE_PHONE_EXISTS = "There are contacts that share phone numbers.";
     public static final String COMMAND_ERROR = "Unknown command.";
 
@@ -89,7 +89,7 @@ public class Main {
         if (!cBook.hasPhone(phone))
             System.out.println(PHONE_NOT_EXISTS);
         else {
-            System.out.println(cBook.getName());
+            System.out.println(cBook.getNameP(phone));
         }
     }
 
