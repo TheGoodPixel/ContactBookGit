@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 
 public class Main {
-    //Constantes que definem os comandos
+    //Constantes que definem os comandos.
     public static final String ADD_CONTACT    = "AC";
     public static final String REMOVE_CONTACT = "RC";
     public static final String GET_PHONE      = "GP";
@@ -17,7 +17,7 @@ public class Main {
     public static final String EXISTS_PHONE   = "EP";
     public static final String QUIT           = "Q";
 
-    //Constantes que definem as mensagens para o utilizador
+    //Constantes que definem as mensagens para o utilizador.
     public static final String CONTACT_EXISTS = "contactBook.Contact already exists.";
     public static final String NAME_NOT_EXIST = "contactBook.Contact does not exist.";
     public static final String PHONE_NOT_EXISTS = "Phone number does not exist.";
@@ -81,7 +81,8 @@ public class Main {
         else
             System.out.println(DUPLICATE_PHONE_EXISTS);
     }
-//get name command
+
+// get name command
     private static void getName(Scanner in, ContactBook cBook) {
         int phone;
 

@@ -93,7 +93,8 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
-/* existsDuplicatesPhone method, searches two different indexes with same phone number
+/* Pre: none
+existsDuplicatesPhone method, searches two different indexes with same phone number
 returns true if found, false if not
  */
     public boolean existsDuplicatePhone() {
