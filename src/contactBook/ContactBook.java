@@ -93,6 +93,9 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
+/* existsDuplicatesPhone method, searches two different indexes with same phone number
+returns true if found, false if not
+ */
     public boolean existsDuplicatePhone() {
         for (int i = counter - 1; i > 0; i--) {
             int ii = searchIndexP(contacts[i].getPhone());
@@ -106,6 +109,7 @@ public class ContactBook {
         return searchIndexP(phone) >= 0;
     }
 
+    //Search Index method using phone number
     private int searchIndexP(int phone) {
         int i = 0;
         int result = -1;

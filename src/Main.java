@@ -74,14 +74,14 @@ public class Main {
         System.out.println();
         in.close();
     }
-
+// exists duplicates command
     private static void existsDuplicatePhone(ContactBook cBook) {
         if (!cBook.existsDuplicatePhone())
             System.out.println(DUPLICATE_PHONE_NOT_EXISTS);
         else
             System.out.println(DUPLICATE_PHONE_EXISTS);
     }
-
+//get name command
     private static void getName(Scanner in, ContactBook cBook) {
         int phone;
 
